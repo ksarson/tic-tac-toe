@@ -1,0 +1,74 @@
+:root {
+    --black: #181818;
+    --green: #09db76;
+    --purple-dark: #5310a7;
+    --purple-light: #5c24b6;
+    --white: #e7ece5;
+}
+
+* {
+    color: var(--white);
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+}
+
+.main-container {
+    align-items: center;
+    background-color: var(--black);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    width: 100vw;
+}
+
+.game-container {
+    border: solid var(--purple-light) 4px;
+    border-radius: 12px;
+    box-shadow: 5px 5px 20px -5px var(--green);
+    display: flex;
+    height: 80%;
+    flex-direction: column;
+    width: 80%;
+}
+
+.game-info {
+    border-radius: 12px;
+    height: 30%;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    height: 70%;
+    padding: 40px;
+}
+
+.game-tile {
+    .middle-center {
+        border: solid var(--white) 2px;
+    }
+    .top-center,
+    .bottom-center {
+        border-left: solid var(--white) 2px;
+        border-right: solid var(--white) 2px;
+    }
+    .middle-left,
+    .middle-right {
+        border-top: solid var(--white) 2px;
+        border-bottom: solid var(--white) 2px;
+    }
+
+    :hover {
+        border: solid var(--green) 2px;
+    }
+}
+
+.tile-button {
+    background-color: var(--black);
+    border: none;
+    height: 100%;
+    width: 100%;
+}
