@@ -35,7 +35,15 @@
 
 .game-info {
     border-radius: 12px;
+    display: flex;
     height: 30%;
+}
+
+.info-item {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    justify-content: center;
 }
 
 .game-board {
