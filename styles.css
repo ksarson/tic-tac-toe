@@ -1,6 +1,12 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('./fonts/Roboto/Roboto-Regular.ttf');
+}
+
 :root {
     --black: #181818;
     --green: #09db76;
+    --green-a30: rgba(9, 219, 118, 0.3);
     --purple-dark: #5310a7;
     --purple-light: #5c24b6;
     --white: #e7ece5;
@@ -8,7 +14,8 @@
 
 * {
     color: var(--white);
-    font-size: 18px;
+    font-family: 'Robto', Arial, Helvetica, sans-serif;
+    font-size: 24px;
     margin: 0;
     padding: 0;
 }
@@ -42,8 +49,29 @@
 .info-item {
     align-items: center;
     display: flex;
+    flex-direction: column;
+    font-weight: 700;
     flex: 1;
+    gap: 24px;
     justify-content: center;
+    text-align: center;
+}
+
+.score {
+    font-size: 32px;
+}
+
+#new-game-button {
+    background-color: var(--purple-dark);
+    border-radius: 12px;
+    display: none;
+    font-weight: 700;
+    padding: 8px 16px;
+}
+
+#new-game-button:hover {
+    background-color: var(--purple-light);
+    cursor: pointer;
 }
 
 .game-board {
@@ -77,6 +105,7 @@
 .tile-button {
     background-color: var(--black);
     border: none;
+    font-size: 64px;
     height: 100%;
     width: 100%;
 }
